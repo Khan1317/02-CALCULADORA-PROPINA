@@ -18,7 +18,7 @@
             <input id="txt_propina" placeholder="8" type="number">
             <label for="txt_iva">%IVA</label>
             <input id="txt_iva" placeholder="10" type="number">
-            <button id="btn_calcular">Calcular</button>
+            <button id="btn_calcular" type="button">Calcular</button>
 
             <label for="total">Total:</label>
             <span id="total"></span>
@@ -26,5 +26,15 @@
             
 
     </section>
+
+    <script type="module">
+        import { calculadora } from './index.js'
+        const $btn_calcular = document.getElementById('btn_calcular');
+
+        $btn_calcular.addEventListener('click', function(){
+            calculadora();
+        })
+
+    </script>
 </body>
 </html>
